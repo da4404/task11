@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
-
+import android.graphics.Color;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -15,7 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
 
     Switch sw;
     RadioGroup radioGroup;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         button_check = findViewById(R.id.button_check);
         screen = findViewById(R.id.main);
     }
+
     public void applyColor(View view)
     {
         if (sw.isChecked())
@@ -41,33 +43,31 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-        public void check(View view)
-        {
-            if (!sw.isChecked())
-            {
-                changeColor();
-            }
-        }
-
-        public void changeColor()
+    public void check(View view)
     {
-            int selectedId = radioGroup.getCheckedRadioButtonId();
-
-            if (selectedId == R.id.rbRed)
-            {
-                screen.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
-            }
-            else if (selectedId == R.id.rbGreen)
-            {
-                screen.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
-            }
-            else if (selectedId == R.id.rbBlue)
-            {
-                screen.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
-            }
-            else if (selectedId == R.id.rbYellow)
-            {
-                screen.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
-            }
+        if (!sw.isChecked())
+        {
+            changeColor();
         }
     }
+
+    public void changeColor()
+    {
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+        if (selectedId == R.id.rbRed)
+        {
+            screen.setBackgroundColor(Color.RED);
+        } else if (selectedId == R.id.rbGreen)
+        {
+            screen.setBackgroundColor(Color.GREEN);
+        }
+        else if (selectedId == R.id.rbBlue)
+        {
+            screen.setBackgroundColor(Color.BLUE);
+        }
+        else if (selectedId == R.id.rbYellow)
+        {
+            screen.setBackgroundColor(Color.YELLOW);
+        }
+    }
+}
