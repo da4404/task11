@@ -11,7 +11,9 @@
         android:id="@+id/sw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
         android:text="Switch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,9 +23,11 @@
         android:id="@+id/button_check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
-        android:text="Button"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="100dp"
         android:onClick="check"
+        android:text="change color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -33,41 +37,47 @@
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="ExtraText,MissingConstraints"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="190dp">
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw"
+        tools:ignore="ExtraText,MissingConstraints">
 
 
         <RadioButton
             android:id="@+id/rbRed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Red"
             android:onClick="applyColor"
+            />
+
 
         <RadioButton
             android:id="@+id/rbGreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton"
             android:onClick="applyColor"
-            />
+            android:text="Green" />
 
 
         <RadioButton
             android:id="@+id/rbBlue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton"
             android:onClick="applyColor"
+            android:text="Blue"
             />
 
         <RadioButton
             android:id="@+id/rbYellow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton"
             android:onClick="applyColor"
+            android:text="Yellow"
             />
 
     </RadioGroup>
